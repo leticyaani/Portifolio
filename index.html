@@ -1048,9 +1048,8 @@
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const targetText = entry.target.innerText;
-                    const isPlus = targetText.includes('+');
-                    const target = parseInt(targetText.replace('+', ''));
+                  const target = parseInt(entry.target.getAttribute('data-target'));
+        const isPlus = entry.target.innerText.includes('+');
                     const duration = 2000;
                     const step = target / (duration / 16);
                     let current = 0;
