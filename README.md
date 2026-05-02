@@ -59,7 +59,6 @@ Estudante de **Análise e Desenvolvimento de Sistemas** na FICR (Recife), com fo
 - Atuação em squad ágil com foco em análise estratégica de dados
 
 ---
----
 
 ## 📬 Contato
 
