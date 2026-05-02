@@ -7,7 +7,6 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='5' y='40' width='20' height='55' rx='4' fill='%238B5CF6'/><rect x='35' y='20' width='20' height='75' rx='4' fill='%23A78BFA'/><rect x='65' y='55' width='20' height='40' rx='4' fill='%236D28D9'/></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         /* ── RESET & BASE ── */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -317,48 +316,39 @@
         .section-title {
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 800;
-            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* ── ABOUT ── */
+        /* ── ABOUT SECTION ── */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 4rem;
-            align-items: start;
         }
 
         .resumo-text {
-            font-size: 1rem;
-            line-height: 1.9;
-            color: var(--muted);
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            border-left: 2px solid var(--purple);
-            background: rgba(139,92,246,0.04);
-            border-radius: 0 6px 6px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 2rem;
         }
-        .resumo-text strong { color: var(--text); }
-        .resumo-text span { color: var(--purple2); }
+        .resumo-text span, .resumo-text strong { color: var(--purple2); }
 
-        .timeline { position: relative; }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 8px; bottom: 0;
-            width: 1px;
-            background: linear-gradient(180deg, var(--purple), transparent);
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 1px solid var(--border);
         }
 
         .timeline-item {
-            padding-left: 2rem;
-            margin-bottom: 2.5rem;
             position: relative;
+            margin-bottom: 3rem;
         }
 
         .timeline-dot {
             position: absolute;
-            left: -4px; top: 6px;
+            left: calc(-2rem - 5px);
+            top: 8px;
             width: 9px; height: 9px;
             border-radius: 50%;
             background: var(--purple);
@@ -367,136 +357,104 @@
 
         .date {
             font-family: 'Space Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--cyan);
-            letter-spacing: 1px;
-        }
-
-        .timeline-item h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0.4rem 0 0.2rem;
-            color: var(--text);
-        }
-
-        .company {
-            font-family: 'Space Mono', monospace;
             font-size: 0.75rem;
-            color: var(--purple2);
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+            display: block;
         }
+
+        .timeline-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .company { font-size: 0.85rem; color: var(--purple2); font-weight: 600; margin-bottom: 1rem; display: block; }
 
         .experience-list {
             list-style: none;
-            margin-top: 0.75rem;
-        }
-        .experience-list li {
-            font-size: 0.875rem;
+            font-size: 0.9rem;
             color: var(--muted);
-            padding: 0.3rem 0;
-            padding-left: 1rem;
-            position: relative;
+            line-height: 1.7;
         }
-        .experience-list li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--purple);
-        }
-
-        /* ── SKILL CARDS ── */
-        .skills-wrapper { display: flex; flex-direction: column; gap: 1rem; }
+        .experience-list li { margin-bottom: 0.75rem; position: relative; padding-left: 1.25rem; }
+        .experience-list li::before { content: '▹'; position: absolute; left: 0; color: var(--purple); }
 
         .skill-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1.25rem 1.5rem;
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
             transition: all 0.3s;
             backdrop-filter: blur(10px);
         }
         .skill-card:hover {
             border-color: var(--purple);
-            transform: translateX(4px);
-            box-shadow: var(--glow);
+            transform: translateX(8px);
+            background: rgba(139,92,246,0.05);
         }
 
         .icon-box {
-            width: 40px; height: 40px;
+            width: 48px; height: 48px;
+            background: rgba(139,92,246,0.1);
             border-radius: 8px;
-            background: rgba(139,92,246,0.15);
-            border: 1px solid rgba(139,92,246,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             color: var(--purple2);
+            font-size: 1.2rem;
             flex-shrink: 0;
-            font-size: 1rem;
         }
 
-        .skill-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .skill-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; }
         .skill-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
 
-        /* ── PROJECTS ── */
-        .projects-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); }
-
-        .projects-grid { display: grid; gap: 2rem; }
+        /* ── PROJECTS SECTION ── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
 
         .project-card {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 2.5rem;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 16px;
+            padding: 2.5rem;
             overflow: hidden;
-            padding: 2rem;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-        }
-        .project-card:hover {
-            border-color: var(--purple);
-            box-shadow: var(--glow);
-        }
-
-        .image-stack-modern {
-            position: relative;
-            height: 220px;
-        }
-
-        .img-back, .img-front {
-            position: absolute;
-            border-radius: 8px;
-            object-fit: cover;
-            cursor: pointer;
             transition: all 0.4s;
         }
-        .img-back {
-            width: 80%; height: 80%;
-            top: 0; left: 0;
-            filter: brightness(0.6);
-            border: 1px solid var(--border);
-        }
-        .img-front {
-            width: 80%; height: 80%;
-            bottom: 0; right: 0;
-            border: 1px solid var(--purple);
-            box-shadow: 0 0 20px rgba(139,92,246,0.2);
-        }
-        .project-card:hover .img-back { filter: brightness(0.8); }
+        .project-card:hover { border-color: var(--purple); box-shadow: var(--glow); }
 
-        .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .project-visual { position: relative; height: 320px; }
+        
+        .image-stack-modern {
+            position: relative;
+            width: 100%; height: 100%;
+        }
+
+        .image-stack-modern img {
+            position: absolute;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all 0.4s;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .img-back { width: 85%; height: 85%; top: 0; left: 0; z-index: 1; filter: brightness(0.5); }
+        .img-front { width: 85%; height: 85%; bottom: 0; right: 0; z-index: 2; }
+
+        .project-card:hover .img-back { transform: translate(-10px, -10px); filter: brightness(0.8); }
+        .project-card:hover .img-front { transform: translate(10px, 10px); }
+
+        .project-tags { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; }
         .project-tags span {
             font-family: 'Space Mono', monospace;
             font-size: 0.65rem;
             color: var(--cyan);
-            border: 1px solid rgba(34,211,238,0.3);
-            background: rgba(34,211,238,0.05);
-            padding: 0.2rem 0.6rem;
-            border-radius: 2px;
-            letter-spacing: 1px;
+            background: rgba(34,211,238,0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
         }
 
         .project-info { display: flex; flex-direction: column; justify-content: center; }
@@ -788,7 +746,7 @@
                     </p>
                     <div class="cta-group">
                         <a href="https://taosgarden.com.br/wp-content/uploads/2026/03/curriculo-dados-leticya_.pdf" download class="btn btn-primary">
-                            <i class="fas fa-download"></i> Currículo
+                            <i class="fas fa-file-download"></i> Download CV
                         </a>
                         <a href="https://github.com/leticyaani" target="_blank" class="btn btn-secondary">
                             <i class="fab fa-github"></i> GitHub
@@ -808,19 +766,19 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="1">0</span>
-                        <span class="stat-label">Projeto publicado</span>
+                        <span class="stat-number" data-target="3">+3</span>
+                        <span class="stat-label">Projetos publicados</span>
                     </div>
                     <div class="stat-item reveal">
                         <span class="stat-number" data-target="2">0</span>
                         <span class="stat-label">Anos de experiência</span>
                     </div>
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-number" data-target="5">5+</span>
                         <span class="stat-label">Tecnologias dominadas</span>
                     </div>
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-number" data-target="100">100</span>
                         <span class="stat-label">% Comprometida</span>
                     </div>
                 </div>
@@ -845,22 +803,73 @@
                         <div class="timeline">
                             <div class="timeline-item reveal">
                                 <div class="timeline-dot"></div>
-                                <span class="date">Out 2025 — Jul 2026</span>
-                                <h3>Estágio em Análise de Dados</h3>
+                                <span class="date">Dez 2024 — Atual (1 ano 6 meses)</span>
+                                <h3>Analista de Dados (Contrato Temporário)</h3>
                                 <span class="company">REEECICLE</span>
                                 <ul class="experience-list">
-                                    <li>Desenvolvimento de dashboards analíticos no Power BI com DAX avançado.</li>
-                                    <li>Construção de consultas SQL para extração e transformação de bases.</li>
-                                    <li>Estruturação de fluxos ETL e modelagem de dados.</li>
+                                    <li>Transformação de dados operacionais em informações estratégicas através de Power BI, SQL e DAX para suporte à tomada de decisão.</li>
+                                    <li>Desenvolvimento e manutenção de dashboards, relatórios e planilhas de custos com operações avançadas em DAX.</li>
+                                    <li>Suporte analítico à equipe comercial com análises de dados e esclarecimento de indicadores de performance.</li>
+                                    <li>Gestão de dados operacionais em sistema ERP, acompanhamento de indicadores e processos, com emissão de notas fiscais.</li>
+                                    <li>Otimização de processos para aumentar eficiência operacional e redução de retrabalho.</li>
                                 </ul>
                             </div>
                             <div class="timeline-item reveal">
                                 <div class="timeline-dot"></div>
-                                <span class="date">2024</span>
-                                <h3>Residência Tecnológica</h3>
+                                <span class="date">Abr 2023 — Abr 2024 (1 ano)</span>
+                                <h3>Estagiária</h3>
+                                <span class="company">DETRAN-PE</span>
+                                <ul class="experience-list">
+                                    <li>Gerenciamento de protocolos e processos administrativos com cumprimento de prazos estabelecidos.</li>
+                                    <li>Atendimento ao público (presencial e telefônico) com orientação sobre documentação necessária.</li>
+                                    <li>Organização e arquivamento de documentos físicos e digitais com padronização de processos.</li>
+                                    <li>Otimização de processos administrativos resultando em redução de atrasos, erros e retrabalho.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <span class="date">Ago 2024 — Abr 2026 (1 ano 9 meses)</span>
+                                <h3>Residência Tecnológica — Kick Off</h3>
                                 <span class="company">Porto Digital</span>
                                 <ul class="experience-list">
-                                    <li>Atuação em squad ágil com foco em análise estratégica de dados.</li>
+                                    <li>Desenvolvimento da solução Cope focada em rastreamento de pegada de carbono com análise de dados de impacto ambiental.</li>
+                                    <li>Prototipação de jornada do usuário com wireframes e mockups, traduzindo dados complexos em interfaces claras e funcionais.</li>
+                                    <li>Pesquisa e análise de dados para conscientização sobre emissões de CO2 e incentivo a hábitos sustentáveis.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <span class="date">Mar 2024 — Ago 2025 (1 ano 6 meses)</span>
+                                <h3>Residência Tecnológica — Rise Up</h3>
+                                <span class="company">Porto Digital</span>
+                                <ul class="experience-list">
+                                    <li>Desenvolvimento de aplicativo de carona em parceria com TPF Engenharia, focado na experiência dos funcionários.</li>
+                                    <li>Prototipação de interface e fluxo de uso no Figma com implementação em Power Apps.</li>
+                                    <li>Criação de solução eficiente e intuitiva para otimizar o dia-a-dia operacional da empresa.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <span class="date">Jan 2025 — Mai 2026 (1 ano 5 meses)</span>
+                                <h3>Ticket Embarque — LembreMed</h3>
+                                <span class="company">Porto Digital</span>
+                                <ul class="experience-list">
+                                    <li>Desenvolvimento do aplicativo LembreMed para auxiliar pessoas com dificuldade em controle de medicação.</li>
+                                    <li>Implementação de "modo cuidador" permitindo monitoramento remoto de controle de medicação por familiares.</li>
+                                    <li>Pesquisa de dados e análise de mercado para fundamentar a solução, com Design Thinking e prototipagem no Figma.</li>
+                                    <li>Projeto vencedor do Ticket Embarque, reconhecido pela inovação e impacto social.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <span class="date">Mar 2025 — Jun 2025 (4 meses)</span>
+                                <h3>Gestão Empresarial com ERP Protheus (TOTVS)</h3>
+                                <span class="company">Instituto da Oportunidade Social</span>
+                                <ul class="experience-list">
+                                    <li>Desenvolvimento do projeto Sleep Easy, utilizando os módulos de Compras, Estoque, Financeiro, Faturamento e Controladoria do Protheus.</li>
+                                    <li>Aplicação prática de gestão de custos e fluxos operacionais para viabilização de produto inovador.</li>
+                                    <li>Projeto selecionado para o Criatech, com apresentação para patrocinadores e instituições.</li>
+                                    <li>Certificação em Gestão Empresarial com foco em administração de sistemas e processos de faturamento.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1024,53 +1033,57 @@
         }, { threshold: 0.1 });
         reveals.forEach(el => observer.observe(el));
 
-        // ── Stats counter ──
-        const counters = document.querySelectorAll('.stat-number');
+        // ── Counter Animation ──
+        const stats = document.querySelectorAll('.stat-number');
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const target = parseInt(entry.target.dataset.target);
-                    const duration = 1500;
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    const duration = 2000;
                     const step = target / (duration / 16);
                     let current = 0;
-                    const timer = setInterval(() => {
+                    
+                    const update = () => {
                         current += step;
-                        if (current >= target) {
-                            entry.target.textContent = target + (target === 100 ? '%' : '+');
-                            clearInterval(timer);
+                        if (current < target) {
+                            entry.target.innerText = Math.floor(current) + (entry.target.innerText.includes('+') ? '+' : '');
+                            requestAnimationFrame(update);
                         } else {
-                            entry.target.textContent = Math.floor(current);
+                            entry.target.innerText = target + (entry.target.innerText.includes('+') ? '+' : '');
                         }
-                    }, 16);
+                    };
+                    update();
                     statsObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
-        counters.forEach(c => statsObserver.observe(c));
+        });
+        stats.forEach(s => statsObserver.observe(s));
 
-        // ── Language bars ──
-        const bars = document.querySelectorAll('.progress');
-        const barObserver = new IntersectionObserver((entries) => {
+        // ── Language Bars ──
+        const progressBars = document.querySelectorAll('.progress');
+        const langObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.width;
-                    barObserver.unobserve(entry.target);
+                    entry.target.style.width = entry.target.getAttribute('data-width');
                 }
             });
-        }, { threshold: 0.5 });
-        bars.forEach(b => barObserver.observe(b));
-
-        // ── Modal ──
-        const modal = document.getElementById('image-modal');
-        const fullImg = document.getElementById('full-image');
-        document.querySelectorAll('.clickable-img').forEach(img => {
-            img.addEventListener('click', () => {
-                fullImg.src = img.src;
-                modal.classList.add('active');
-            });
         });
-        document.querySelector('.modal-close').addEventListener('click', () => modal.classList.remove('active'));
-        modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
+        progressBars.forEach(p => langObserver.observe(p));
+
+        // ── Image Modal ──
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('full-image');
+        const closeBtn = document.querySelector('.modal-close');
+
+        document.querySelectorAll('.clickable-img').forEach(img => {
+            img.onclick = () => {
+                modal.classList.add('active');
+                modalImg.src = img.src;
+            }
+        });
+
+        closeBtn.onclick = () => modal.classList.remove('active');
+        modal.onclick = (e) => { if(e.target === modal) modal.classList.remove('active'); }
     </script>
 </body>
 </html>
