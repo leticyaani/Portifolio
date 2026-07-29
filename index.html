@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Meta Tags -->
-    <title>Leticya Anielle | Analista de Dados & BI</title>
-    <meta name="description" content="Portfólio de Leticya Anielle, Analista de Dados especialista em SQL, Python, Power BI e ERP Protheus. Transformando dados complexos em decisões estratégicas.">
-    <meta name="keywords" content="Analista de Dados, Business Intelligence, BI, Power BI, SQL, Python, Protheus, TOTVS, Data Analytics, Leticya Anielle">
+    <title>Leticya Anielle | Analista de Dados Financeiros & BI</title>
+    <meta name="description" content="Portfólio de Leticya Anielle, Analista de Dados Financeiros especialista em SQL, Python, Power BI e Governança Financeira. Foco em KPIs estratégicos e automação.">
+    <meta name="keywords" content="Analista de Dados, Business Intelligence, BI, Power BI, SQL, Python, Protheus, Finanças, Governança, Leticya Anielle">
     <meta name="author" content="Leticya Anielle">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Leticya Anielle | Analista de Dados & BI">
-    <meta property="og:description" content="Especialista em transformar dados complexos em decisões estratégicas. Veja meus projetos e trajetória.">
+    <meta property="og:title" content="Leticya Anielle | Analista de Dados Financeiros & BI">
+    <meta property="og:description" content="Especialista em transformar dados complexos em previsibilidade financeira e eficiência operacional.">
     <meta property="og:image" content="https://taosgarden.com.br/wp-content/uploads/2026/03/foto-leticya.jpg">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='5' y='40' width='20' height='55' rx='4' fill='%238B5CF6'/><rect x='35' y='20' width='20' height='75' rx='4' fill='%23A78BFA'/><rect x='65' y='55' width='20' height='40' rx='4' fill='%236D28D9'/></svg>">
@@ -433,73 +433,69 @@
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 2.5rem;
-            overflow: hidden;
-            transition: all 0.4s;
+            align-items: start;
         }
-        .project-card:hover { border-color: var(--purple); box-shadow: var(--glow); }
 
-        .project-visual { position: relative; height: 320px; }
-        
+        .project-visual {
+            position: relative;
+        }
+
         .image-stack-modern {
             position: relative;
-            width: 100%; height: 100%;
+            height: 300px;
         }
 
         .image-stack-modern img {
             position: absolute;
+            width: 80%;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.4s;
+            transition: all 0.4s ease;
             cursor: pointer;
-            object-fit: cover;
         }
 
-        .img-back { width: 85%; height: 85%; top: 0; left: 0; z-index: 1; filter: brightness(0.5); }
-        .img-front { width: 85%; height: 85%; bottom: 0; right: 0; z-index: 2; }
+        .img-back { top: 0; left: 0; z-index: 1; opacity: 0.6; }
+        .img-front { bottom: 0; right: 0; z-index: 2; }
 
-        .project-card:hover .img-back { transform: translate(-10px, -10px); filter: brightness(0.8); }
-        .project-card:hover .img-front { transform: translate(10px, 10px); }
+        .project-card:hover .img-back { transform: translate(-10px, -10px) scale(1.05); opacity: 1; }
+        .project-card:hover .img-front { transform: translate(10px, 10px) scale(1.05); }
 
-        .project-tags { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .project-tags {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
         .project-tags span {
             font-family: 'Space Mono', monospace;
             font-size: 0.65rem;
             color: var(--cyan);
             background: rgba(34,211,238,0.1);
-            padding: 0.25rem 0.75rem;
-            border-radius: 100px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
         }
 
-        .project-info { display: flex; flex-direction: column; justify-content: center; }
-        .project-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
-        .project-description { font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+        .project-info h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .project-description { font-size: 0.95rem; color: var(--muted); line-height: 1.6; margin-bottom: 2rem; }
 
         .btn-project {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.75rem;
             color: var(--purple2);
             text-decoration: none;
-            border: 1px solid var(--border);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-            width: fit-content;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: gap 0.3s;
         }
-        .btn-project:hover {
-            border-color: var(--purple);
-            color: var(--purple2);
-            background: rgba(139,92,246,0.1);
-        }
+        .btn-project:hover { gap: 0.8rem; }
 
         /* ── EDUCATION ── */
         .edu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
+            gap: 2rem;
         }
 
         .edu-item {
@@ -752,10 +748,10 @@
         <section id="home" class="hero">
             <div class="container hero-content">
                 <div class="hero-text" id="reveal">
-                    <span class="badge">Analista de Dados</span>
+                    <span class="badge">Analista de Dados Financeiros</span>
                     <h1>Leticya <br><span class="purple-gradient">Anielle</span></h1>
                     <p class="description">
-                        Transformando dados complexos em decisões estratégicas. Especialista em <span>SQL, Python, Power BI e ERP Protheus</span>.
+                        Especialista em transformar dados complexos em <span>previsibilidade financeira</span> e decisões estratégicas. Domínio em <span>SQL, Power BI, Python e Governança</span>.
                     </p>
                     <div class="cta-group">
                         <a href="https://drive.google.com/file/d/1mpDihwzePE89FM-59TdnGtiGnHSMPIbk/view?usp=sharing" target="_blank" class="btn btn-primary">
@@ -779,20 +775,20 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="3">+3</span>
-                        <span class="stat-label">Projetos publicados</span>
+                        <span class="stat-number" data-target="100">100</span>
+                        <span class="stat-label">% de Acurácia Fiscal</span>
                     </div>
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="2">2+</span>
-                        <span class="stat-label">Anos de experiência</span>
+                        <span class="stat-number" data-target="3">3+</span>
+                        <span class="stat-label">Anos de Experiência</span>
                     </div>
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="5">5+</span>
-                        <span class="stat-label">Tecnologias dominadas</span>
+                        <span class="stat-number" data-target="8">8+</span>
+                        <span class="stat-label">Tecnologias Dominadas</span>
                     </div>
                     <div class="stat-item reveal">
                         <span class="stat-number" data-target="100">100</span>
-                        <span class="stat-label">% Comprometida</span>
+                        <span class="stat-label">% Foco em KPI</span>
                     </div>
                 </div>
             </div>
@@ -802,84 +798,49 @@
         <section id="sobre" class="about-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="badge">Trajetória & Skills</span>
+                    <span class="badge">Estratégia & BI</span>
                     <h2 class="section-title">Sobre <span class="purple-gradient">Leticya</span></h2>
                 </div>
                 <div class="about-grid">
                     <div class="experience-col">
                         <div class="content-block reveal">
                             <p class="resumo-text">
-                                Estudante de Análise e Desenvolvimento de Sistemas com foco em <strong>Business Intelligence</strong>. 
-                                Minha atuação une a construção de dashboards de alto impacto com a estruturação de processos <span>ETL robustos</span>.
+                                Analista de Dados com sólida expertise na <strong>estruturação financeira e operacional</strong>. 
+                                Especialista em converter fluxos complexos de faturamento e governança em <span>dashboards de alto impacto</span> e relatórios de previsibilidade estratégica.
                             </p>
                         </div>
                         <div class="timeline">
                             <div class="timeline-item reveal">
                                 <div class="timeline-dot"></div>
-                                <span class="date">Dez 2024 — Atual (1 ano 6 meses)</span>
-                                <h3>Analista de Dados (Contrato Temporário)</h3>
-                                <span class="company">REEECICLE</span>
+                                <span class="date">Julho de 2026 – Atual</span>
+                                <h3>Analista de Dados Financeiro e Operações</h3>
+                                <span class="company">REEECICLE | Recife - PE</span>
                                 <ul class="experience-list">
-                                    <li>Transformação de dados operacionais em informações estratégicas através de Power BI, SQL e DAX para suporte à tomada de decisão.</li>
-                                    <li>Desenvolvimento e manutenção de dashboards, relatórios e planilhas de custos com operações avançadas em DAX.</li>
-                                    <li>Suporte analítico à equipe comercial com análises de dados e esclarecimento de indicadores de performance.</li>
-                                    <li>Gestão de dados operacionais em sistema ERP, acompanhamento de indicadores e processos, com emissão de notas fiscais no Bling.</li>
-                                    <li>Otimização de processos para aumentar eficiência operacional e redução de retrabalho.</li>
+                                    <li><strong>Estratégia & KPIs:</strong> Liderança na análise de dados financeiros para suporte direto à alta gestão e tomada de decisão estratégica.</li>
+                                    <li><strong>Governança & Fluxos:</strong> Reestruturação completa dos processos de faturamento, contas a pagar e receber, elevando a confiabilidade das informações.</li>
+                                    <li><strong>BI & Automação:</strong> Desenvolvimento de soluções em Power BI e Excel Avançado, reduzindo o retrabalho e otimizando rotinas operacionais.</li>
+                                    <li><strong>Previsibilidade:</strong> Análise detalhada de fluxo de caixa para suporte em novos investimentos e cortes de despesas.</li>
+                                    <li><strong>Compliance Fiscal:</strong> Auditoria de faturamento e gestão de dados críticos em ERP, garantindo 100% de rastreabilidade documental.</li>
                                 </ul>
                             </div>
                             <div class="timeline-item reveal">
                                 <div class="timeline-dot"></div>
-                                <span class="date">Abr 2023 — Abr 2024 (1 ano)</span>
+                                <span class="date">Abr 2023 — Abr 2024</span>
                                 <h3>Estagiária</h3>
                                 <span class="company">DETRAN-PE</span>
                                 <ul class="experience-list">
-                                    <li>Gerenciamento de protocolos e processos administrativos com cumprimento rigoroso de prazos.</li>
-                                    <li>Atendimento ao público com orientação técnica sobre documentação e processos legais.</li>
-                                    <li>Organização e digitalização de acervos documentais com foco em padronização e rastreabilidade.</li>
-                                    <li>Otimização de fluxos internos resultando em redução de atrasos e aumento da eficiência do setor.</li>
+                                    <li>Otimização de fluxos internos e gestão de processos administrativos com foco em eficiência.</li>
+                                    <li>Digitalização e padronização de acervos documentais para maior rastreabilidade.</li>
                                 </ul>
                             </div>
                             <div class="timeline-item reveal">
                                 <div class="timeline-dot"></div>
-                                <span class="date">Ago 2024 — Abr 2026 (1 ano 9 meses)</span>
-                                <h3>Residência Tecnológica — Kick Off</h3>
-                                <span class="company">Porto Digital</span>
+                                <span class="date">Ago 2024 — Abr 2026</span>
+                                <h3>Residência Tecnológica</h3>
+                                <span class="company">Porto Digital (Kick Off / Rise Up)</span>
                                 <ul class="experience-list">
-                                    <li>Desenvolvimento da solução Cope focada em rastreamento de pegada de carbono com análise de dados de impacto ambiental.</li>
-                                    <li>Prototipação de jornada do usuário traduzindo dados complexos em interfaces claras e funcionais.</li>
-                                    <li>Pesquisa e análise de dados para conscientização sobre emissões de CO2.</li>
-                                </ul>
-                            </div>
-                            <div class="timeline-item reveal">
-                                <div class="timeline-dot"></div>
-                                <span class="date">Mar 2024 — Ago 2025 (1 ano 6 meses)</span>
-                                <h3>Residência Tecnológica — Rise Up</h3>
-                                <span class="company">Porto Digital</span>
-                                <ul class="experience-list">
-                                    <li>Desenvolvimento de aplicativo de carona em parceria com TPF Engenharia, focado na experiência dos funcionários.</li>
-                                    <li>Implementação da aplicação utilizando Power Apps e prototipagem de fluxos no Figma.</li>
-                                </ul>
-                            </div>
-                            <div class="timeline-item reveal">
-                                <div class="timeline-dot"></div>
-                                <span class="date">Jan 2025 — Mai 2026 (1 ano 5 meses)</span>
-                                <h3>Ticket Embarque — LembreMed</h3>
-                                <span class="company">Porto Digital</span>
-                                <ul class="experience-list">
-                                    <li>Desenvolvimento do aplicativo LembreMed para auxílio no controle de medicação, com "modo cuidador".</li>
-                                    <li>Análise de dados e mercado para fundamentar a solução, utilizando Design Thinking.</li>
-                                    <li><strong>Equipe vencedora do Ticket Embarque</strong>, reconhecida pela inovação e impacto social.</li>
-                                </ul>
-                            </div>
-                            <div class="timeline-item reveal">
-                                <div class="timeline-dot"></div>
-                                <span class="date">Mar 2025 — Jun 2025 (4 meses)</span>
-                                <h3>Gestão Empresarial com ERP Protheus (TOTVS)</h3>
-                                <span class="company">Instituto da Oportunidade Social</span>
-                                <ul class="experience-list">
-                                    <li>Projeto Sleep Easy: travesseiro inovador com gestão completa via Protheus (Compras, Estoque, Financeiro, Faturamento).</li>
-                                    <li><strong>Selecionado para o Criatech</strong> para apresentação a patrocinadores e investidores.</li>
-                                    <li>Certificação em Gestão Empresarial com foco em administração de sistemas ERP.</li>
+                                    <li>Desenvolvimento de soluções de impacto ambiental e mobilidade urbana utilizando Power Apps e Design Thinking.</li>
+                                    <li><strong>Equipe vencedora</strong> no Ticket Embarque com o projeto LembreMed.</li>
                                 </ul>
                             </div>
                         </div>
@@ -887,24 +848,31 @@
                     <div class="skills-col">
                         <div class="skills-wrapper">
                             <div class="skill-card reveal">
+                                <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                                <div>
+                                    <h4>Governança Financeira</h4>
+                                    <p>Fluxo de Caixa, KPIs de Performance e Auditoria de Faturamento.</p>
+                                </div>
+                            </div>
+                            <div class="skill-card reveal">
+                                <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+                                <div>
+                                    <h4>BI & Storytelling</h4>
+                                    <p>Power BI Avançado, DAX e visualização de dados estratégicos.</p>
+                                </div>
+                            </div>
+                            <div class="skill-card reveal">
                                 <div class="icon-box"><i class="fas fa-database"></i></div>
                                 <div>
-                                    <h4>SQL & Modelagem</h4>
-                                    <p>Oracle, PostgreSQL e Modelagem Dimensional (Star Schema).</p>
+                                    <h4>SQL & ERP</h4>
+                                    <p>Manipulação de dados, Protheus (TOTVS) e integração de sistemas.</p>
                                 </div>
                             </div>
                             <div class="skill-card reveal">
-                                <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                                <div class="icon-box"><i class="fas fa-robot"></i></div>
                                 <div>
-                                    <h4>Power BI</h4>
-                                    <p>DAX Avançado, métricas de negócio e Storytelling.</p>
-                                </div>
-                            </div>
-                            <div class="skill-card reveal">
-                                <div class="icon-box"><i class="fas fa-code"></i></div>
-                                <div>
-                                    <h4>ETL & Python</h4>
-                                    <p>Manipulação de dados com foco em qualidade e automação.</p>
+                                    <h4>Automação</h4>
+                                    <p>Excel Avançado (VBA) e Python para otimização de rotinas.</p>
                                 </div>
                             </div>
                         </div>
@@ -917,7 +885,7 @@
         <section id="projetos" class="projects-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="badge">Portfólio Técnico</span>
+                    <span class="badge">Cases de Sucesso</span>
                     <h2 class="section-title">Projetos em <span class="purple-gradient">Destaque</span></h2>
                 </div>
                 <div class="projects-grid">
@@ -929,9 +897,9 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <div class="project-tags"><span>PostgreSQL</span><span>Power BI</span></div>
-                            <h3>Miaujude — Modelagem & BI</h3>
-                            <p class="project-description">Implementação de banco relacional em PostgreSQL com arquitetura BI-ready e dashboards analíticos de alto impacto.</p>
+                            <div class="project-tags"><span>PostgreSQL</span><span>Power BI</span><span>Finanças</span></div>
+                            <h3>Miaujude — Modelagem & BI Financeiro</h3>
+                            <p class="project-description">Implementação de arquitetura BI-ready focada em controle financeiro e dashboards analíticos de alto impacto para tomada de decisão.</p>
                             <a href="https://github.com/leticyaani" target="_blank" class="btn-project"><i class="fab fa-github"></i> Ver código</a>
                         </div>
                     </article>
@@ -943,7 +911,7 @@
         <section id="educacao" class="edu-section">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="badge">Formação Acadêmica</span>
+                    <span class="badge">Formação</span>
                     <h2 class="section-title">Educação <span class="purple-gradient">& Idiomas</span></h2>
                 </div>
                 <div class="edu-grid">
@@ -956,6 +924,13 @@
                                     <h3>Análise e Desenvolvimento de Sistemas</h3>
                                     <p class="institution">FICR — Recife</p>
                                     <p class="period"><i class="far fa-calendar-alt"></i> 2024 — 2026</p>
+                                </div>
+                            </div>
+                            <div class="edu-item reveal" style="margin-top: 1rem;">
+                                <div class="edu-dot"></div>
+                                <div class="edu-content">
+                                    <h3>Gestão Empresarial com ERP Protheus</h3>
+                                    <p class="institution">Instituto da Oportunidade Social</p>
                                 </div>
                             </div>
                         </div>
@@ -982,10 +957,10 @@
             <div class="container">
                 <div class="section-header reveal">
                     <span class="badge">Networking</span>
-                    <h2 class="section-title">Entre em <span class="purple-gradient">Contato</span></h2>
+                    <h2 class="section-title">Vamos <span class="purple-gradient">Conversar?</span></h2>
                 </div>
                 <div class="contact-grid reveal">
-                    <a href="mailto:leticya.anielle@exemplo.com" class="contact-card">
+                    <a href="mailto:leticya.anielle2016@gmail.com" class="contact-card">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-info">
                             <span class="contact-label">Email</span>
@@ -1008,7 +983,7 @@
                     </a>
                 </div>
                 <footer class="footer-bottom reveal">
-                    <p>© 2026 Leticya Anielle — Analista de Dados & BI. Feito com dados & dedicação.</p>
+                    <p>© 2026 Leticya Anielle — Analista de Dados Financeiros & BI. Transformando dados em valor.</p>
                 </footer>
             </div>
         </section>
