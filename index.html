@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Meta Tags -->
-    <title>Leticya Anielle | Analista de Dados Financeiros & BI</title>
+    <title>Leticya Anielle | Analista de Dados </title>
     <meta name="description" content="Portfólio de Leticya Anielle, Analista de Dados Financeiros graduada em ADS. Especialista em SQL, Python, Power BI e Governança Financeira.">
     <meta name="keywords" content="Analista de Dados, Business Intelligence, BI, Power BI, SQL, Python, Protheus, Finanças, Governança, Leticya Anielle">
     <meta name="author" content="Leticya Anielle">
@@ -13,7 +13,7 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Leticya Anielle | Analista de Dados Financeiros & BI">
-    <meta property="og:description" content="Especialista em transformar dados complexos em previsibilidade financeira e eficiência operacional.">
+    <meta property="og:description" content="Especialista em transformar dados complexos em previsibilidade.">
     <meta property="og:image" content="https://taosgarden.com.br/wp-content/uploads/2026/03/foto-leticya.jpg">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='5' y='40' width='20' height='55' rx='4' fill='%238B5CF6'/><rect x='35' y='20' width='20' height='75' rx='4' fill='%23A78BFA'/><rect x='65' y='55' width='20' height='40' rx='4' fill='%236D28D9'/></svg>">
@@ -419,6 +419,56 @@
         .skill-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
 
         /* ── PROJECTS SECTION ── */
+        .app-preview {
+            min-height: 300px;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: linear-gradient(145deg, #172033 0%, #101827 70%, rgba(139,92,246,0.22) 100%);
+            border: 1px solid rgba(139,92,246,0.35);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.35), 0 0 30px rgba(139,92,246,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .app-preview::after {
+            content: '';
+            position: absolute;
+            width: 180px; height: 180px;
+            right: -70px; bottom: -80px;
+            border-radius: 50%;
+            background: rgba(34,211,238,0.1);
+        }
+        .app-preview-header { display: flex; align-items: center; gap: 0.65rem; font-weight: 700; color: var(--text); margin-bottom: 2rem; }
+        .app-logo { width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; background: linear-gradient(135deg, var(--purple), var(--cyan)); }
+        .app-preview-greeting { font-size: 1.15rem; line-height: 1.35; font-weight: 700; max-width: 230px; margin-bottom: 1.5rem; }
+        .medication-card { display: flex; align-items: center; gap: 0.7rem; padding: 0.8rem; border-radius: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.75rem; position: relative; z-index: 1; }
+        .medication-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--cyan); background: rgba(34,211,238,0.12); flex-shrink: 0; }
+        .medication-card strong, .medication-card small { display: block; }
+        .medication-card strong { font-size: 0.72rem; margin-bottom: 0.2rem; }
+        .medication-card small { font-size: 0.58rem; color: var(--muted); }
+        .medication-check { color: #34d399; margin-left: auto; }
+        .medication-card-secondary { opacity: 0.75; }
+        .etl-preview {
+            min-height: 300px;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: linear-gradient(145deg, #111827 0%, #0d1820 70%, rgba(34,211,238,0.16) 100%);
+            border: 1px solid rgba(34,211,238,0.28);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.35), 0 0 30px rgba(34,211,238,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .etl-preview::after { content: ''; position: absolute; width: 190px; height: 190px; right: -75px; bottom: -85px; border-radius: 50%; background: rgba(139,92,246,0.12); }
+        .etl-title { display: flex; align-items: center; gap: 0.65rem; color: var(--text); font-weight: 700; margin-bottom: 1.7rem; }
+        .etl-title i { color: var(--cyan); font-size: 1.2rem; }
+        .etl-flow { display: flex; align-items: center; justify-content: space-between; gap: 0.35rem; position: relative; z-index: 1; margin-bottom: 1.6rem; }
+        .etl-node { width: 72px; height: 72px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.35rem; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); color: var(--cyan); }
+        .etl-node i { font-size: 1.15rem; }
+        .etl-node span { color: var(--text); font-family: 'Space Mono', monospace; font-size: 0.55rem; }
+        .etl-arrow { color: var(--purple2); font-size: 0.75rem; }
+        .etl-terminal { position: relative; z-index: 1; padding: 0.85rem; border-left: 2px solid var(--cyan); border-radius: 0 8px 8px 0; background: rgba(0,0,0,0.25); color: #94a3b8; font-family: 'Space Mono', monospace; font-size: 0.62rem; line-height: 1.7; }
+        .etl-terminal strong { color: #34d399; font-weight: 400; }
+
+        /* ── PROJECTS SECTION ── */
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -737,6 +787,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#educacao">Formação</a></li>
+                <li><a href="#conquistas">Conquistas</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <li><a href="https://www.linkedin.com/in/leticya-anielle/" target="_blank">LinkedIn</a></li>
             </ul>
@@ -754,7 +806,7 @@
                         Graduada em <span>Análise e Desenvolvimento de Sistemas</span>. Especialista em transformar dados complexos em <span>previsibilidade financeira</span> e decisões estratégicas.
                     </p>
                     <div class="cta-group">
-                        <a href="https://drive.google.com/file/d/1mpDihwzePE89FM-59TdnGtiGnHSMPIbk/view?usp=sharing" target="_blank" class="btn btn-primary">
+                        <a href="https://drive.google.com/file/d/1qivwZuvYL1xFeRHryn9TJd1DuPkklRVd/view?usp=sharing" target="_blank" class="btn btn-primary">
                             <i class="fas fa-file-download"></i> Download CV
                         </a>
                         <a href="https://github.com/leticyaani" target="_blank" class="btn btn-secondary">
@@ -787,8 +839,8 @@
                         <span class="stat-label">Tecnologias Dominadas</span>
                     </div>
                     <div class="stat-item reveal">
-                        <span class="stat-number" data-target="100">100</span>
-                        <span class="stat-label">% Foco em KPI</span>
+                        <span class="stat-number" data-target="1">1</span>
+                        <span class="stat-label">º lugar em competição</span>
                     </div>
                 </div>
             </div>
@@ -816,21 +868,25 @@
                                 <h3>Analista de Dados Financeiro e Operações</h3>
                                 <span class="company">REEECICLE | Recife - PE</span>
                                 <ul class="experience-list">
-                                    <li><strong>Estratégia & KPIs:</strong> Liderança na análise de dados financeiros para suporte direto à alta gestão e tomada de decisão estratégica.</li>
-                                    <li><strong>Governança & Fluxos:</strong> Reestruturação completa dos processos de faturamento, contas a pagar e receber, elevando a confiabilidade das informações.</li>
-                                    <li><strong>BI & Automação:</strong> Desenvolvimento de soluções em Power BI e Excel Avançado, reduzindo o retrabalho e otimizando rotinas operacionais.</li>
-                                    <li><strong>Previsibilidade:</strong> Análise detalhada de fluxo de caixa para suporte em novos investimentos e cortes de despesas.</li>
-                                    <li><strong>Compliance Fiscal:</strong> Auditoria de faturamento e gestão de dados críticos em ERP, garantindo 100% de rastreabilidade documental.</li>
+                                    <li><strong>Análise de Dados & KPIs:</strong> Análise e consolidação de dados financeiros e operacionais provenientes de diferentes fontes, incluindo ERP Bling, planilhas e consultas em SQL, transformando informações em indicadores para suporte à gestão.</li>
+
+                                    <li><strong>Governança & Processos:</strong> Atuação na organização e reestruturação dos processos de faturamento, contas a pagar e receber, aumentando a confiabilidade e o controle das informações.</li>
+
+                                    <li><strong>BI & Automação:</strong> Desenvolvimento de dashboards e soluções analíticas em Power BI e Excel Avançado, automatizando rotinas, reduzindo retrabalho e facilitando o acompanhamento de indicadores.</li>
+
+                                    <li><strong>Análise Financeira:</strong> Acompanhamento de fluxo de caixa, pagamentos, recebimentos e indicadores financeiros para apoiar decisões, investimentos e controle de despesas.</li>
+
+                                    <li><strong>Qualidade & Rastreabilidade dos Dados:</strong> Validação e auditoria de dados financeiros, faturamento e documentos fiscais no ERP, garantindo maior precisão, consistência e rastreabilidade das informações.</li>
                                 </ul>
                             </div>
                             <div class="timeline-item reveal">
                                 <div class="timeline-dot"></div>
-                                <span class="date">Abr 2023 — Abr 2024</span>
-                                <h3>Estagiária</h3>
-                                <span class="company">DETRAN-PE</span>
+                                <span class="date">Abr 2025 — Jul 2026</span>
+                                <h3>Estagiária de Análise de Dados</h3>
+                                <span class="company">REEECICLE</span>
                                 <ul class="experience-list">
-                                    <li>Otimização de fluxos internos e gestão de processos administrativos com foco em eficiência.</li>
-                                    <li>Digitalização e padronização de acervos documentais para maior rastreabilidade.</li>
+                                    <li> Transformação de dados brutos em insights operacionais utilizando SQL, DAX e Power BI.</li>
+                                    <li>• Criação de relatórios executivos e planilhas de custos complexas com cálculos avançados em DAX</li>
                                 </ul>
                             </div>
                         </div>
@@ -881,6 +937,34 @@
                 <div class="projects-grid">
                     <article class="project-card reveal">
                         <div class="project-visual">
+                            <div class="app-preview">
+                                <div class="app-preview-header">
+                                    <span class="app-logo"><i class="fas fa-heartbeat"></i></span>
+                                    <span>LembreMed</span>
+                                </div>
+                                <div class="app-preview-greeting">Olá, hoje é dia de cuidar.</div>
+                                <div class="medication-card">
+                                    <span class="medication-icon"><i class="fas fa-pills"></i></span>
+                                    <div><strong>Medicamento</strong><small>Próximo lembrete: 08:00</small></div>
+                                    <i class="fas fa-check-circle medication-check"></i>
+                                </div>
+                                <div class="medication-card medication-card-secondary">
+                                    <span class="medication-icon"><i class="fas fa-clock"></i></span>
+                                    <div><strong>Rotina de cuidados</strong><small>Lembretes simples e acessíveis</small></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags"><span>Saúde</span><span>UX/UI</span><span>Impacto Social</span></div>
+                            <span class="status-badge status-concluido">▹ 1º lugar — Ticket Embarque</span>
+                            <h3>LembreMed — Tecnologia para o cuidado</h3>
+                            <p class="project-description">Aplicativo desenvolvido para auxiliar pessoas idosas no controle e acompanhamento de seus medicamentos, promovendo mais autonomia, segurança e regularidade no tratamento. O projeto conquistou o primeiro lugar no Ticket Embarque.</p>
+                            <a href="https://github.com/leticyaani" target="_blank" class="btn-project"><i class="fab fa-github"></i> Ver projeto</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-visual">
                             <div class="image-stack-modern">
                                 <img src="https://taosgarden.com.br/wp-content/uploads/2026/03/imagem_2026-03-15_224627925.png" alt="Miaujude Visão Geral" class="clickable-img img-back">
                                 <img src="https://taosgarden.com.br/wp-content/uploads/2026/03/imagem_2026-03-15_224546975.png" alt="Miaujude Financeiro" class="clickable-img img-front">
@@ -890,7 +974,29 @@
                             <div class="project-tags"><span>PostgreSQL</span><span>Power BI</span><span>Finanças</span></div>
                             <h3>Miaujude — Modelagem & BI Financeiro</h3>
                             <p class="project-description">Implementação de arquitetura BI-ready focada em controle financeiro e dashboards analíticos de alto impacto para tomada de decisão.</p>
-                            <a href="https://github.com/leticyaani" target="_blank" class="btn-project"><i class="fab fa-github"></i> Ver código</a>
+                            <a href="https://github.com/leticyaani/MIAUJUDE" target="_blank" class="btn-project"><i class="fab fa-github"></i> Ver código</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-visual">
+                            <div class="etl-preview">
+                                <div class="etl-title"><i class="fas fa-microchip"></i><span>System Data Collector</span></div>
+                                <div class="etl-flow">
+                                    <div class="etl-node"><i class="fas fa-server"></i><span>Extract</span></div>
+                                    <i class="fas fa-chevron-right etl-arrow"></i>
+                                    <div class="etl-node"><i class="fas fa-file-csv"></i><span>Load</span></div>
+                                    <i class="fas fa-chevron-right etl-arrow"></i>
+                                    <div class="etl-node"><i class="fas fa-chart-line"></i><span>Analyze</span></div>
+                                </div>
+                                <div class="etl-terminal"><strong>pipeline.status = "running"</strong><br>platform → system_data.csv → pandas insights</div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags"><span>Python</span><span>Pandas</span><span>ETL</span><span>Linux</span></div>
+                            <h3>System Data Collector & Analyzer</h3>
+                            <p class="project-description">Pipeline ETL completo para coleta, armazenamento incremental e análise de informações de hardware e sistema operacional em tempo real. Utiliza Python e a biblioteca platform na extração, persiste os dados em CSV e gera insights históricos com Pandas.</p>
+                            <a href="System Data Collector & Analyzer" target="_blank" class="btn-project"><i class="fab fa-github"></i> Ver código</a>
                         </div>
                     </article>
                 </div>
@@ -936,6 +1042,36 @@
                                 <div class="lang-info"><span>Inglês</span><span>B2</span></div>
                                 <div class="lang-bar"><div class="progress" data-width="75%"></div></div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONQUISTAS -->
+        <section id="conquistas" class="edu-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="badge">Reconhecimento</span>
+                    <h2 class="section-title">Conquistas <span class="purple-gradient">& Desenvolvimento</span></h2>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-item reveal">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <span class="status-badge status-concluido">▹ Bolsa integral</span>
+                            <h3>Bolsa de estudos de 100% em Inglês</h3>
+                            <p class="institution">Wizard by Pearson</p>
+                            <p class="period">Reconhecimento e oportunidade de desenvolvimento profissional.</p>
+                        </div>
+                    </div>
+                    <div class="edu-item reveal">
+                        <div class="edu-dot"></div>
+                        <div class="edu-content">
+                            <span class="status-badge status-concluido">▹ 1º lugar</span>
+                            <h3>Premiação no Ticket Embarque</h3>
+                            <p class="institution">Projeto LembreMed</p>
+                            <p class="period">Solução tecnológica voltada ao cuidado e à autonomia de pessoas idosas.</p>
                         </div>
                     </div>
                 </div>
